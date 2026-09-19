@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mohamed Asif | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Preloader -->
+  <div class="preloader" id="preloader">
+    <svg class="preloader-rocket" viewBox="0 0 100 140" xmlns="http://www.w3.org/2000/svg">
+      <path d="M50 5 C70 25 75 55 70 85 L30 85 C25 55 30 25 50 5 Z" fill="#e8e6e1" stroke="#f0a500" stroke-width="2"/>
+      <path d="M30 82 L12 108 L30 98 Z" fill="#f0a500"/>
+      <path d="M70 82 L88 108 L70 98 Z" fill="#f0a500"/>
+      <polygon points="50,32 61,38 61,54 50,60 39,54 39,38" fill="#f0a500"/>
+      <polygon points="50,37 57,41 57,52 50,56 43,52 43,41" fill="#0a0a0f"/>
+      <text x="50" y="50" text-anchor="middle" font-size="9" font-weight="800" fill="#f0a500" font-family="Arial, sans-serif">CK</text>
+    </svg>
+    <div class="preloader-flame">
+      <span class="flame-layer flame-1"></span>
+      <span class="flame-layer flame-2"></span>
+      <span class="flame-layer flame-3"></span>
+    </div>
+    <p class="preloader-text">CODEKRAFTERS</p>
+  </div>
+
+  <!-- Scroll progress bar -->
+  <div class="progress-bar" id="progressBar"></div>
+
+  <!-- Background layers -->
+  <div class="stars" id="stars" aria-hidden="true"></div>
+  <div class="aurora" aria-hidden="true">
+    <span class="blob blob-1"></span>
+    <span class="blob blob-2"></span>
+    <span class="blob blob-3"></span>
+  </div>
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="spotlight" id="spotlight" aria-hidden="true"></div>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="logo">Mohamed Asif</div>
+    <ul class="nav-links">
+      <span class="nav-indicator"></span>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#achievements">Achievements</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Animated Rocket (interactive easter egg) -->
+  <div class="rocket-outer" id="rocketOuter">
+    <div class="rocket-track" id="rocketTrack">
+      <button class="rocket-wrap" id="rocketBtn" aria-label="Launch the rocket">
+        <svg class="rocket" viewBox="0 0 100 140" xmlns="http://www.w3.org/2000/svg">
+          <path d="M50 5 C70 25 75 55 70 85 L30 85 C25 55 30 25 50 5 Z" fill="#e8e6e1" stroke="#f0a500" stroke-width="2"/>
+          <path d="M30 82 L12 108 L30 98 Z" fill="#f0a500"/>
+          <path d="M70 82 L88 108 L70 98 Z" fill="#f0a500"/>
+          <polygon points="50,32 61,38 61,54 50,60 39,54 39,38" fill="#f0a500"/>
+          <polygon points="50,37 57,41 57,52 50,56 43,52 43,41" fill="#0a0a0f"/>
+          <text x="50" y="50" text-anchor="middle" font-size="9" font-weight="800" fill="#f0a500" font-family="Arial, sans-serif">CK</text>
+        </svg>
+        <div class="flame">
+          <span class="flame-layer flame-1"></span>
+          <span class="flame-layer flame-2"></span>
+          <span class="flame-layer flame-3"></span>
+        </div>
+      </button>
+    </div>
+  </div>
+
+  <!-- About Me -->
+  <section id="about" class="reveal">
+    <div class="status-badge">
+      <span class="pulse-dot"></span>
+      Open to internships & hackathon collabs
+    </div>
+    <h1>Hi, I'm <span class="accent-name">Mohamed Asif</span></h1>
+    <p class="tagline"><span id="typewriter"></span><span class="cursor-blink">|</span></p>
+    <p>I'm learning web development, building projects with HTML, CSS, and JavaScript as I go. So far I've built a prototype of JARVIS, an AI voice assistant, and Securis, a banking safety app built at a hackathon, alongside this portfolio site.</p>
+    <div class="hero-ctas">
+      <a href="#projects" class="btn btn-primary">View Projects</a>
+      <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="reveal">
+    <h2>Skills</h2>
+    <ul class="skills-list">
+      <li><svg class="skill-icon" viewBox="0 0 24 24"><path d="M4 3l1.5 17L12 22l6.5-2L20 3H4z" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 8h8M8 12h7M9 16l3 1 3-1" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>HTML</li>
+      <li><svg class="skill-icon" viewBox="0 0 24 24"><path d="M4 4h16l-1.5 15L12 21l-6.5-2L4 4z" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 8h8l-.5 9L12 18l-3.2-1L8.5 14" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>CSS</li>
+      <li><svg class="skill-icon" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M9 16c0 1 .8 1.5 1.6 1.5S12 16.8 12 15.5V9M14 15.5c0 1 .9 1.5 1.7 1.5s1.8-.6 1.8-1.7-1-1.4-1.8-1.7c-.7-.3-1.6-.6-1.6-1.5s.8-1.3 1.5-1.3 1.4.3 1.6.9" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>JavaScript</li>
+      <li><svg class="skill-icon" viewBox="0 0 24 24"><rect x="2" y="7" width="14" height="10" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M9 4v3M9 17v3" stroke="currentColor" stroke-width="1.5"/><path d="M18 9l3 3-3 3" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>Responsive Design</li>
+      <li><svg class="skill-icon" viewBox="0 0 24 24"><circle cx="6" cy="6" r="2" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="6" cy="18" r="2" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="18" cy="12" r="2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M6 8v8M8 6.5l10 4M8 17.5l10-4" stroke="currentColor" stroke-width="1.5"/></svg>Git & GitHub</li>
+      <li><svg class="skill-icon" viewBox="0 0 24 24"><circle cx="12" cy="10" r="6" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M9 20h6M10 22h4M12 4V2" stroke="currentColor" stroke-width="1.5"/></svg>Problem Solving</li>
+    </ul>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="reveal">
+    <h2>Projects</h2>
+    <div class="project-cards">
+      <div class="card tilt-card">
+        <h3>JARVIS – AI Voice Assistant (Prototype)</h3>
+        <p>A JARVIS-inspired personal AI voice assistant web app, built with a React + Vite frontend and a Node/Express backend. Features an animated orb UI, real voice input/output, a wake-word prototype, conversation memory, and tool-calling.</p>
+        <div class="tech-badges">
+          <span class="badge">React</span>
+          <span class="badge">Vite</span>
+          <span class="badge">Node.js</span>
+          <span class="badge">Express</span>
+        </div>
+      </div>
+      <div class="card tilt-card">
+        <h3>Securis – Intelligent Banking & Guardian Shield</h3>
+        <p>A hackathon project (built as a team) designed to protect senior citizens from banking fraud. Includes a Guardian Portal for family members to monitor transactions, a voice assistant for banking commands, transaction limits based on amount, screen-share (remote access) attack defense, a night-time cool-down mode, and multilingual voice support.</p>
+        <div class="tech-badges">
+          <span class="badge">HTML</span>
+          <span class="badge">CSS</span>
+          <span class="badge">JavaScript</span>
+        </div>
+        <a href="https://harish2008-pc.github.io/SECURIS-prototype/" target="_blank" rel="noopener noreferrer">View Prototype →</a>
+      </div>
+      <div class="card tilt-card">
+        <h3>Personal Portfolio Website</h3>
+        <p>This website — built with HTML, CSS, and JavaScript to showcase my skills and journey as a developer.</p>
+        <div class="tech-badges">
+          <span class="badge">HTML</span>
+          <span class="badge">CSS</span>
+          <span class="badge">JavaScript</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Achievements -->
+  <section id="achievements" class="reveal">
+    <h2>Achievements</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <span class="timeline-dot"></span>
+        <div class="timeline-content">
+          <span class="timeline-label">Hackathon</span>
+          <p>Built Securis, a banking safety prototype, at a hackathon with a team</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-dot"></span>
+        <div class="timeline-content">
+          <span class="timeline-label">Milestone</span>
+          <p>Built and deployed my first portfolio website</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="reveal">
+    <h2>Contact</h2>
+    <div class="contact-card" id="emailCard" data-copy="mohamedasif20081980@gmail.com">
+      <span class="contact-label">Email</span>
+      <span class="contact-value">mohamedasif20081980@gmail.com</span>
+      <span class="copy-hint">Click to copy</span>
+    </div>
+    <a class="contact-card" href="https://github.com/zamaasif2008-beep" target="_blank" rel="noopener noreferrer">
+      <span class="contact-label">GitHub</span>
+      <span class="contact-value">github.com/zamaasif2008-beep</span>
+      <span class="copy-hint">Open →</span>
+    </a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="hex-badge">CK</div>
+    <p>Member of <strong>CodeKrafters</strong> — it's more than a club.</p>
+  </footer>
+
+  <!-- Toast -->
+  <div class="toast" id="toast">Copied to clipboard!</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
