@@ -171,40 +171,34 @@ function spawnSmoke() {
     particle.style.setProperty('--drift', `${Math.random() * 60 - 30}px`);
     particle.style.animationDelay = `${Math.random() * 0.2}s`;
     document.body.appendChild(particle);
-    setTimeout(() => particle.remove(), 1400);
+    setTimeout(() => particle.remove(), 1100);
   }
 }
 
-rocketBtn.addEventListener('click', () => {
-  if (rocketOuter.classList.contains('launching')) return;
-  playLaunchSound();
-  spawnSmoke();
-  rocketOuter.classList.add('launching');
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-  setTimeout(() => {
-    rocketOuter.classList.remove('launching');
-    rocketTrack.style.transform = 'translateY(0)';
-  }, 1300);
-});
+if (rocketBtn) {
+  rocketBtn.addEventListener('click', () => {
+    if (rocketOuter.classList.contains('launching')) return;
+    playLaunchSound();
+    spawnSmoke();
+    rocketOuter.classList.add('launching');
+    
+    // Reset rocket position after launch
+    setTimeout(() => {
+      rocketOuter.classList.remove('launching');
+    }, 2500);
+  });
+}
 
-// ---- Click-to-copy email ----
+// ---- Copy Email Toast ----
 const emailCard = document.getElementById('emailCard');
 const toast = document.getElementById('toast');
-let toastTimeout;
 
-emailCard.addEventListener('click', async () => {
-  const text = emailCard.getAttribute('data-copy');
-  try {
-    await navigator.clipboard.writeText(text);
-  } catch (err) {
-    const temp = document.createElement('textarea');
-    temp.value = text;
-    document.body.appendChild(temp);
-    temp.select();
-    document.execCommand('copy');
-    document.body.removeChild(temp);
-  }
-  toast.classList.add('show');
-  clearTimeout(toastTimeout);
-  toastTimeout = setTimeout(() => toast.classList.remove('show'), 2000);
-});
+if (emailCard) {
+  emailCard.addEventListener('click', () => {
+    const email = emailCard.getAttribute('data-copy');
+    navigator.clipboard.writeText(email).then(() => {
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 2000);
+    });
+  });
+}
